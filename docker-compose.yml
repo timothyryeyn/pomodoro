@@ -34,6 +34,7 @@ services:
     container_name: adonis
     image: timothyryeyn/pomodoro-backend:1.1
     environment:
+      - PORT=3333
       - HOST=0.0.0.0
       - APP_KEY=8xlaZqIc72Bm_C-mQdveVtNJHsPtK0aV
       - DRIVE_DISK=local
