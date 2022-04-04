@@ -20,7 +20,7 @@ services:
 
   web:
     container_name: nuxt
-    image: timothyryeyn/pomodoro-frontend
+    image: timothyryeyn/pomodoro-frontend:1.0
     environment:
       - NUXT_HOST=0.0.0.0
       - NUXT_PORT=3000
@@ -32,7 +32,7 @@ services:
 
   api:
     container_name: adonis
-    image: timothyryeyn/pomodoro-backend
+    image: timothyryeyn/pomodoro-backend:1.0
     environment:
       - HOST=0.0.0.0
       - APP_KEY=8xlaZqIc72Bm_C-mQdveVtNJHsPtK0aV
