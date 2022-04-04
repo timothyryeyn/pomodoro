@@ -17,11 +17,11 @@
       </div>
       <div class="flex flex-col gap-y-4">
         <app-form-button>Login</app-form-button>
-        <a
+        <!-- <a
           class="font-semibold underline text-lg self-center hover:opacity-60"
           href=""
           >Forgot Password</a
-        >
+        > -->
       </div>
     </app-form>
     <div class="flex flex-col gap-y-1 self-center items-center text-white">
@@ -47,9 +47,10 @@ export default {
         let response = await this.$auth.loginWith('local', {
           data: credentials,
         })
-        console.log(await Notification.requestPermission())
-        console.log(response)
+        alert('Successfully logged in')
+        await Notification.requestPermission()
       } catch (err) {
+        alert('Invalid email or password')
         console.error(err)
       }
     },

@@ -1,29 +1,37 @@
 <template>
   <nuxt-link
-    class="bg-white flex justify-between p-4 rounded-md cursor-pointer group hover:bg-black"
+    class="bg-white flex justify-between rounded-md cursor-pointer group hover:bg-black group overflow-auto"
     :to="{ name: 'tasks-id', params: { id } }"
   >
-    <div class="text-xl font-semibold group-hover:text-white">{{ title }}</div>
-    <div class="flex gap-x-2 items-center">
-      <div class="font-medium text-lg group-hover:text-white">
+    <div class="text-xl font-semibold group-hover:text-white pl-4 py-4">
+      {{ title }}
+    </div>
+    <div class="flex gap-x-2 group-hover:gap-x-6">
+      <div
+        class="font-medium text-lg group-hover:text-white py-4 pr-4 group-hover:pr-0"
+      >
         {{ displayStats }}
       </div>
-      <dropdown
-        ><dropdown-item @click.native.prevent="clickEditHandler"
-          >Edit</dropdown-item
+      <div class="justify-around hidden group-hover:w-32 group-hover:flex">
+        <div
+          class="flex items-center justify-center text-center group-hover:text-white grow hover:bg-blue-400"
+          @click.prevent="clickEditHandler"
         >
-        <dropdown-item @click.native.prevent="clickDeleteHandler"
-          ><span class="text-red-600">Delete</span></dropdown-item
+          Edit
+        </div>
+        <div
+          class="flex items-center justify-center text-center group-hover:text-white grow hover:bg-red-500"
+          @click.prevent="clickDeleteHandler"
         >
-      </dropdown>
+          Delete
+        </div>
+      </div>
     </div>
   </nuxt-link>
 </template>
 
 <script>
-import DropdownItem from './DropdownItem.vue'
 export default {
-  components: { DropdownItem },
   props: ['title', 'pomodoroStats', 'index', 'id'],
   methods: {
     clickEditHandler() {

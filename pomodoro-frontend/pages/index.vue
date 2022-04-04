@@ -7,7 +7,12 @@
     />
     <div class="mb-4 text-white">
       What is the
-      <a class="underline font-semibold" href="">Pomodoro Technique</a>?
+      <a
+        class="underline font-semibold"
+        href="https://en.wikipedia.org/wiki/Pomodoro_Technique"
+        target="_blank"
+        >Pomodoro Technique</a
+      >?
     </div>
   </main>
 </template>

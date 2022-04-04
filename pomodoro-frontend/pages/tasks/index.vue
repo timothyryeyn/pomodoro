@@ -32,11 +32,10 @@
 </template>
 
 <script>
-import Dropdown from '~/components/Dropdown.vue'
 import TaskItem from '~/components/TaskItem.vue'
 
 export default {
-  components: { Dropdown, TaskItem },
+  components: { TaskItem },
   async asyncData({ $axios }) {
     const data = await $axios.$get('/tasks')
     console.log(data)
