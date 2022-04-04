@@ -24,7 +24,7 @@ services:
     environment:
       - NUXT_HOST=0.0.0.0
       - NUXT_PORT=3000
-      - API_PORT=http://3.104.95.254:3333/api
+      - API_URL=http://localhost:3333/api
     depends_on:
       - api
     ports:
