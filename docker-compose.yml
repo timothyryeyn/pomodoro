@@ -20,7 +20,7 @@ services:
 
   web:
     container_name: nuxt
-    image: timothyryeyn/pomodoro-frontend:1.1
+    image: timothyryeyn/pomodoro-frontend:1.2
     environment:
       - NUXT_HOST=0.0.0.0
       - NUXT_PORT=3000
